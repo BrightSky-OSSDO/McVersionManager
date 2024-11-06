@@ -1,7 +1,7 @@
 # McVersionManager
 A program for managing multiple versions of Minecraft Bedrock Edition.
 
-Minecraft Bedrock Edition currently lacks a built-in way to install multiple versions for some reason, despite being added to the Minecraft Launcher not long ago, so I created a program for that myself.
+Minecraft Bedrock Edition currently lacks a built-in way to install multiple versions for some reason, so I created McVersionManager for doing just that.
 
 # Disclaimer
 McVersionManager was neither created by nor endorsed by Mojang Studios or Microsoft. It was created by BrightSky OSSDO.
@@ -18,10 +18,14 @@ People have already created several tools for downgrading Minecraft Bedrock Edit
 
 But in McVersionManager, you can use both the Marketplace and the Seed Picker in older Minecraft versions.
 
-Another flaw in many of these tools is the fact that they only let you downgrade to no earlier than version 0.14. But they taunt you by showing nonfunctional download buttons for 0.13. And anything below 0.13, there isn't even a button to download. But McVersionManager has all the Minecraft Bedrock Edition releases, both new and old. The only versions it currently lacks are the preview versions, but these will likely be added in the future.
+Another flaw in many of these tools is the fact that they only let you downgrade to no earlier than version 0.14. But they taunt you by showing nonfunctional download buttons for 0.13. And anything below 0.13, there isn't even a button to download.
+
+But McVersionManager has all the Minecraft Bedrock Edition releases, both new and old. The only versions it currently lacks are the preview versions, but these will likely be added in the future.
 
 # How to use McVersionManager
-When you open McVersionManager, there will be 3 tabs: Versions, Imported, and Installed. The Versions tab contains a table of all Minecraft versions that you have **not** installed. There will be a download button next to each version which, when clicked, will download and install that version. It does this by fetching the desired version's package file from Microsoft's servers. If the desired version is not available on Microsoft's servers (like if it's a REALLY old version that predates Microsoft's acquisition of Minecraft), McVersionManager will fetch the desired version from archive.org. The package will then be installed and launchable by going to the Installed tab.
+![McVersionManager interface](McVersionManager.png)
+
+When you open McVersionManager, there will be 3 tabs: Versions, Imported, and Installed. The Versions tab contains a table of all Minecraft versions that you have **not** installed. There will be a download button next to each version which, when clicked, will download and install that version. It does this by fetching the desired version's package file from Microsoft's servers. If the desired version is not available on Microsoft's servers (like if it's a REALLY old version that predates Microsoft's acquisition of Minecraft), McVersionManager will fetch the desired version from archive.org. The package will then be installed, and you can launch the version from the Installed tab.
 
 In the Options menu, you can specify whether or not to delete package files after installing to save disk space. By default, this is enabled.
 
@@ -33,12 +37,12 @@ You can uninstall all Minecraft versions by selecting "Uninstall all versions" i
 You can build McVersionManager using PyInstaller:
 
 1. Download this repository to your computer.
-2. Install PyQt5 using this command: `pip install PyQt5`
+2. If you haven't already, install PyQt5 using this command: `pip install PyQt5`
 3. Open Windows Command Prompt and navigate to the root of the repository.
 4. Create the executable by running this command: `pyinstaller --onefile --windowed source\McVersionManager.py`
 5. It should create and place `McVersionManager.exe` in the `dist` folder. I honestly don't know why it's called "dist", I guess the developers of PyInstaller are just weird.
 
-Alternatively, you can download a premade executable from the Releases page.
+Alternatively, you can just download a premade executable from the Releases page.
 
 # License
 McVersionManager is released under the MIT license.
